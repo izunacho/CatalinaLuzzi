@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalina Luzzi — Links</title>
+    <meta name="description" content="Todos los links de Catalina Luzzi. Twitch, Instagram, TikTok, YouTube, Twitter y más.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,400;1,700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --violet: #8b5cf6;
+            --violet-dark: #6d28d9;
+            --violet-glow: #a78bfa;
+            --rose: #f43f5e;
+            --rose-glow: #fb7185;
+            --gold: #f59e0b;
+            --green: #10b981;
+            --black: #050507;
+            --dark: #0c0c10;
+            --dark2: #131318;
+            --dark3: #1a1a22;
+            --white: #f0f0f5;
+            --gray: #71717a;
+            --gray-light: #a1a1aa;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html, body {
+            min-height: 100vh;
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: var(--black);
+            color: var(--white);
+            overflow-x: hidden;
+        }
+
+        ::selection { background: var(--violet); color: white; }
+
+        /* ===== BACKGROUND ===== */
+        .bg-layer {
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            background:
+                radial-gradient(ellipse 70% 50% at 50% 0%, rgba(139, 92, 246, 0.1) 0%, transparent 55%),
+                radial-gradient(ellipse 50% 40% at 80% 100%, rgba(244, 63, 94, 0.07) 0%, transparent 50%),
+                radial-gradient(ellipse 40% 40% at 10% 60%, rgba(139, 92, 246, 0.05) 0%, transparent 50%),
+                var(--black);
+        }
+
+        .bg-grid {
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            background-image:
+                linear-gradient(rgba(139, 92, 246, 0.025) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(139, 92, 246, 0.025) 1px, transparent 1px);
+            background-size: 50px 50px;
+            mask-image: radial-gradient(ellipse 60% 60% at 50% 30%, black 10%, transparent 70%);
+            -webkit-mask-image: radial-gradient(ellipse 60% 60% at 50% 30%, black 10%, transparent 70%);
+        }
+
+        .orb {
+            position: fixed;
+            border-radius: 50%;
+            filter: blur(90px);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .orb-1 {
+            width: 250px; height: 250px;
+            background: rgba(139, 92, 246, 0.07);
+            top: 5%; left: 15%;
+            animation: drift 14s ease-in-out infinite;
+        }
+
+        .orb-2 {
+            width: 180px; height: 180px;
+            background: rgba(244, 63, 94, 0.05);
+            bottom: 15%; right: 10%;
+            animation: drift 18s ease-in-out infinite reverse;
+        }
+
+        @keyframes drift {
+            0%, 100% { transform: translate(0, 0); }
+            33% { transform: translate(20px, -25px); }
+            66% { transform: translate(-15px, 15px); }
+        }
+
+        .grain {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 9000;
+            opacity: 0.025;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+        }
+
+        /* ===== CONTAINER ===== */
+        .container {
+            position: relative;
+            z-index: 1;
+            max-width: 440px;
+            margin: 0 auto;
+            padding: 50px 20px 60px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* ===== PROFILE ===== */
+        .profile {
+            text-align: center;
+            margin-bottom: 35px;
+            animation: fadeUp 0.8s 0.1s both;
+        }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(25px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .avatar-wrapper {
+            position: relative;
+            width: 110px;
+            height: 110px;
+            margin: 0 auto 20px;
+        }
+
+        .avatar {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--violet), var(--rose));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 42px;
+            font-weight: 800;
+            color: white;
+            position: relative;
+            z-index: 2;
+            box-shadow: 0 0 40px rgba(139, 92, 246, 0.25);
+        }
+
+        .avatar-ring {
+            position: absolute;
+            inset: -8px;
+            border-radius: 50%;
+            border: 2px solid rgba(139, 92, 246, 0.25);
+            animation: spin 10s linear infinite;
+            z-index: 1;
+        }
+
+        .avatar-ring::after {
+            content: '';
+            position: absolute;
+            top: -3px;
+            left: 50%;
+            width: 6px;
+            height: 6px;
+            background: var(--violet);
+            border-radius: 50%;
+            box-shadow: 0 0 8px var(--violet);
+        }
+
+        @keyframes spin { to { transform: rotate(360deg); } }
+
+        .live-badge {
+            position: absolute;
+            bottom: 2px;
+            right: -2px;
+            background: var(--rose);
+            color: white;
+            font-size: 9px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            padding: 4px 10px;
+            border-radius: 20px;
+            z-index: 3;
+            border: 3px solid var(--black);
+            animation: livePulse 2s infinite;
+        }
+
+        @keyframes livePulse {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(244, 63, 94, 0.5); }
+            50% { box-shadow: 0 0 0 6px rgba(244, 63, 94, 0); }
+        }
+
+        .profile-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            margin-bottom: 6px;
+        }
+
+        .profile-name span {
+            font-style: italic;
+            font-weight: 400;
+            background: linear-gradient(135deg, var(--violet-glow), var(--rose-glow));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .profile-bio {
+            font-size: 14px;
+            color: var(--gray-light);
+            line-height: 1.6;
+            max-width: 320px;
+            margin: 0 auto;
+            font-weight: 300;
+        }
+
+        .profile-tags {
+            display: flex;
+            gap: 8px;
+            justify-content: center;
+            margin-top: 14px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            font-size: 10px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            padding: 5px 12px;
+            border-radius: 20px;
+            background: rgba(139, 92, 246, 0.1);
+            border: 1px solid rgba(139, 92, 246, 0.2);
+            color: var(--violet-glow);
+        }
+
+        /* ===== LINKS ===== */
+        .links-section {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .links-label {
+            font-size: 10px;
+            font-weight: 600;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--gray);
+            text-align: center;
+            margin-bottom: 4px;
+        }
+
+        .link-card {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            width: 100%;
+            padding: 16px 22px;
+            border-radius: 16px;
+            background: rgba(19, 19, 24, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            text-decoration: none;
+            color: var(--white);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        .link-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, transparent 40%, rgba(139, 92, 246, 0.04) 100%);
+            opacity: 0;
+            transition: opacity 0.4s;
+        }
+
+        .link-card:hover::before { opacity: 1; }
+
+        .link-card:hover {
+            transform: translateY(-3px) scale(1.015);
+            border-color: rgba(139, 92, 246, 0.25);
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.3), 0 0 20px rgba(139, 92, 246, 0.07);
+        }
+
+        .link-card:active {
+            transform: scale(0.98);
+        }
+
+        .link-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            flex-shrink: 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        .link-info {
+            flex: 1;
+            position: relative;
+            z-index: 1;
+        }
+
+        .link-info h3 {
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 2px;
+            letter-spacing: -0.2px;
+        }
+
+        .link-info p {
+            font-size: 12px;
+            color: var(--gray);
+            font-weight: 400;
+        }
+
+        .link-arrow {
+            font-size: 16px;
+            color: var(--gray);
+            transition: all 0.3s;
+            position: relative;
+            z-index: 1;
+        }
+
+        .link-card:hover .link-arrow {
+            color: var(--violet);
+            transform: translateX(4px);
+        }
+
+        /* Individual colors */
+        .link-twitch .link-icon { background: rgba(139, 92, 246, 0.15); }
+        .link-twitch:hover { border-color: rgba(139, 92, 246, 0.35); }
+
+        .link-ig .link-icon { background: rgba(225, 48, 108, 0.15); }
+        .link-ig:hover { border-color: rgba(225, 48, 108, 0.3); }
+
+        .link-tiktok .link-icon { background: rgba(255, 255, 255, 0.08); }
+        .link-tiktok:hover { border-color: rgba(255, 255, 255, 0.2); }
+
+        .link-x .link-icon { background: rgba(255, 255, 255, 0.06); }
+        .link-x:hover { border-color: rgba(255, 255, 255, 0.15); }
+
+        .link-yt .link-icon { background: rgba(255, 0, 0, 0.12); }
+        .link-yt:hover { border-color: rgba(255, 0, 0, 0.25); }
+
+        .link-podcast .link-icon { background: rgba(30, 215, 96, 0.12); }
+        .link-podcast:hover { border-color: rgba(30, 215, 96, 0.25); }
+
+        .link-photo .link-icon { background: rgba(244, 63, 94, 0.12); }
+        .link-photo:hover { border-color: rgba(244, 63, 94, 0.25); }
+
+        .link-donate .link-icon { background: rgba(245, 158, 11, 0.12); }
+        .link-donate:hover { border-color: rgba(245, 158, 11, 0.3); }
+
+        /* Featured link (Twitch) */
+        .link-featured {
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.12), rgba(244, 63, 94, 0.08));
+            border-color: rgba(139, 92, 246, 0.2);
+            padding: 20px 22px;
+        }
+
+        .link-featured .link-icon {
+            width: 50px;
+            height: 50px;
+            font-size: 26px;
+            background: linear-gradient(135deg, var(--violet), var(--rose));
+        }
+
+        .link-featured:hover {
+            box-shadow: 0 10px 40px rgba(139, 92, 246, 0.2), 0 0 30px rgba(139, 92, 246, 0.08);
+        }
+
+        .link-featured .featured-badge {
+            position: absolute;
+            top: 12px;
+            right: 14px;
+            font-size: 8px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--violet-glow);
+            background: rgba(139, 92, 246, 0.15);
+            padding: 3px 8px;
+            border-radius: 6px;
+            z-index: 1;
+        }
+
+        /* Stagger animations */
+        .link-card:nth-child(1) { animation: fadeUp 0.6s 0.15s both; }
+        .link-card:nth-child(2) { animation: fadeUp 0.6s 0.22s both; }
+        .link-card:nth-child(3) { animation: fadeUp 0.6s 0.29s both; }
+        .link-card:nth-child(4) { animation: fadeUp 0.6s 0.36s both; }
+        .link-card:nth-child(5) { animation: fadeUp 0.6s 0.43s both; }
+        .link-card:nth-child(6) { animation: fadeUp 0.6s 0.50s both; }
+        .link-card:nth-child(7) { animation: fadeUp 0.6s 0.57s both; }
+        .link-card:nth-child(8) { animation: fadeUp 0.6s 0.64s both; }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            margin-top: auto;
+            padding-top: 30px;
+            text-align: center;
+            animation: fadeUp 0.8s 0.9s both;
+        }
+
+        .footer-text {
+            font-size: 11px;
+            color: rgba(255, 255, 255, 0.15);
+            letter-spacing: 0.5px;
+        }
+
+        .footer-text a {
+            color: rgba(139, 92, 246, 0.4);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-text a:hover { color: var(--violet); }
+
+        .footer-heart {
+            margin-top: 12px;
+            font-size: 18px;
+            opacity: 0.2;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Background layers -->
+<div class="bg-layer"></div>
+<div class="bg-grid"></div>
+<div class="orb orb-1"></div>
+<div class="orb orb-2"></div>
+<div class="grain"></div>
+
+<!-- Main container -->
+<div class="container">
+
+    <!-- Profile -->
+    <div class="profile">
+        <div class="avatar-wrapper">
+            <div class="avatar">CL</div>
+            <div class="avatar-ring"></div>
+            <div class="live-badge">LIVE</div>
+        </div>
+        <h1 class="profile-name">Catalina <span>Luzzi</span></h1>
+        <p class="profile-bio">Streamer argentina 🇦🇷 Estudiante de Artes Audiovisuales · Fotógrafa · Cantante · Creadora de contenido en Twitch</p>
+        <div class="profile-tags">
+            <span class="tag">Streamer</span>
+            <span class="tag">Artista</span>
+            <span class="tag">Creadora</span>
+        </div>
+    </div>
+
+    <!-- Main links -->
+    <div class="links-section">
+        <div class="links-label">Links</div>
+
+        <!-- Twitch (Featured) -->
+        <a href="https://twitch.tv/catalinaluzzi" target="_blank" class="link-card link-featured link-twitch">
+            <span class="featured-badge">Principal</span>
+            <div class="link-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714z"/></svg>
+            </div>
+            <div class="link-info">
+                <h3>Twitch</h3>
+                <p>Mirá el stream en vivo — twitch.tv/catalinaluzzi</p>
+            </div>
+            <span class="link-arrow">→</span>
+        </a>
+
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/catalinaluzzi/" target="_blank" class="link-card link-ig">
+            <div class="link-icon">📸</div>
+            <div class="link-info">
+                <h3>Instagram</h3>
+                <p>@catalinaluzzi</p>
+            </div>
+            <span class="link-arrow">→</span>
+        </a>
+
+        <!-- TikTok -->
+        <a href="https://www.tiktok.com/@catalinaluzzi_" target="_blank" class="link-card link-tiktok">
+            <div class="link-icon">🎵</div>
+            <div class="link-info">
+                <h3>TikTok</h3>
+                <p>@catalinaluzzi_</p>
+            </div>
+            <span class="link-arrow">→</span>
+        </a>
+
+        <!-- X / Twitter -->
+        <a href="https://twitter.com/catalinaluzzi" target="_blank" class="link-card link-x">
+            <div class="link-icon">𝕏</div>
+            <div class="link-info">
+                <h3>X / Twitter</h3>
+                <p>@catalinaluzzi</p>
+            </div>
+            <span class="link-arrow">→</span>
+        </a>
+
+        <!-- YouTube -->
+        <a href="https://www.youtube.com/channel/UC3evmuZBImL1BoMx6BmU2_A" target="_blank" class="link-card link-yt">
+            <div class="link-icon">▶️</div>
+            <div class="link-info">
+                <h3>YouTube</h3>
+                <p>Catalina Luzzi González</p>
+            </div>
+            <span class="link-arrow">→</span>
+        </a>
+
+        <!-- Photography -->
+        <a href="https://www.instagram.com/ph.bycata/" target="_blank" class="link-card link-photo">
+            <div class="link-icon">📷</div>
+            <div class="link-info">
+                <h3>Fotografía</h3>
+                <p>@ph.bycata — su portfolio fotográfico</p>
+            </div>
+            <span class="link-arrow">→</span>
+        </a>
+
+        <!-- Podcast -->
+        <a href="https://creators.spotify.com/pod/profile/javier333/episodes/19-CATALINALUZZI-Me-encantara-sacar-un-tema-y-que-lo-reaccionen-e1hvkkc" target="_blank" class="link-card link-podcast">
+            <div class="link-icon">🎙️</div>
+            <div class="link-info">
+                <h3>Podcast — Off Stream</h3>
+                <p>"Me encantaría sacar un tema y que lo reaccionen"</p>
+            </div>
+            <span class="link-arrow">→</span>
+        </a>
+
+        <!-- Donate -->
+        <a href="https://streamlabs.com/catalinaluzzi/tip" target="_blank" class="link-card link-donate">
+            <div class="link-icon">💛</div>
+            <div class="link-info">
+                <h3>Apoyar con una donación</h3>
+                <p>Streamlabs — dejale un tip para bancar su contenido</p>
+            </div>
+            <span class="link-arrow">→</span>
+        </a>
+
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="footer-text">© 2026 <a href="https://twitch.tv/catalinaluzzi" target="_blank">Catalina Luzzi</a></div>
+        <div class="footer-heart">♡</div>
+    </div>
+
+</div>
+
+</body>
+</html>
